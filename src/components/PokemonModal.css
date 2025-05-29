@@ -1,0 +1,183 @@
+:root {
+  --accent: #00f5a0; /* Neon green accent */
+}
+
+/* Fullscreen modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 13, 31, 0.9);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fullscreen card layout */
+.modal-card {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 90%;
+  background: #1b1b2f;
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 0 25px var(--accent), 0 0 50px var(--accent);
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+}
+
+/* Left section with Pokémon images */
+.modal-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-right: 1px solid #333;
+}
+
+.modal-left img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px var(--accent));
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-left img:hover {
+  transform: scale(1.05);
+}
+
+/* Right section with info */
+.modal-right {
+  flex: 2;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.modal-right h2 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.modal-info p {
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.modal-types,
+.modal-stats {
+  margin-top: 1.5rem;
+}
+
+/* Stats bars */
+.stat-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.stat-bar span {
+  width: 100px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.bar-bg {
+  flex: 1;
+  background: #101027;
+  border: 1px solid var(--accent);
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  transition: width 0.4s ease-out;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--accent);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-types {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.modal-types h3 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.type-badges {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.type-pill {
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px var(--accent), inset 0 0 6px var(--accent);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.type-pill:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+  color: black;
+}

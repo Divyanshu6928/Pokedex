@@ -1,0 +1,253 @@
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif; /* Use a techy font for a futuristic vibe */
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+h2 {
+  color: #00f1ff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+footer {
+  color: #00f1ff;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+header {
+  padding: 20px;
+  background: linear-gradient(to right, #00f9ff33, #0077ff33);
+  box-shadow: var(--shadow-neon);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Search Container */
+.search-container {
+  padding-top: 50px;
+  margin: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #00f1ff;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #00f1ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Pokémon List Grid */
+.pokemon-list {
+  margin-top: 20px;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Pokémon Card */
+.pokemon-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  width: 250px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.pokemon-card h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+}
+
+.pokemon-card:hover img {
+  transform: rotate(360deg);
+}
+
+/* Neon Glow Effect */
+.pokemon-card:hover h3 {
+  color: #00f1ff;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 1);
+}
+
+/* Modal */
+.pokemon-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.pokemon-modal.show {
+  opacity: 1;
+}
+
+.pokemon-modal-content {
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  color: #fff;
+}
+
+.pokemon-modal img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.pokemon-modal h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #00f1ff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.pokemon-modal p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.pokemon-modal .close-btn {
+  background-color: #00f1ff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pokemon-modal .close-btn:hover {
+  background-color: #7a00ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+}
+
+.pokemon-detail-grid {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  /* margin-bottom: 20px; */
+}
+
+
+.pokemon-detail-grid img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  /* box-shadow: 0 0 25px var(--accent); */
+  transition: transform 0.3s ease;
+}
+
+.pokemon-detail-grid img:hover {
+  transform: scale(1.05);
+}
+
+.main-text{
+  font-family: stella;
+}
+
+.pokemon-detail-grid h1{
+  color: white;
+}
+
+.header-text{
+  color: white;
+  font-family: stella;
+  font-size: 80px;
+}
+
+.pikachu-detail{
+  text-wrap: wrap;
+  text-align: left;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: "Montserrat"
+}
+
+.pikachu-text{
+  text-align: left;
+  margin-bottom: 20px ;
+}
+
+.scroll-down-btn{
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  font-family: stella;
+  font-size: 40px;
+  border-radius: 20px;
+  background: #00f1ff;
+  cursor: pointer;
+  border: 2px dashed;
+}
