@@ -69,7 +69,7 @@ function App() {
               <button className='scroll-down-btn'>Scroll Down  </button>
           </div>
           <div>
-            <img src="./src/assets/pokemon.png" alt="" width={"200px"} height={"600px"}/>
+            <img src="./public/pokemon.png" alt="" width={"200px"} height={"600px"}/>
           </div>
         </div>
         
