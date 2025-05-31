@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PokemonCard from './components/PokemonCard';
 import PokemonModal from './components/PokemonModal';
 import './index.css';
+import assets from './assets/assets.js';
 
 function App() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -69,7 +70,7 @@ function App() {
               <button className='scroll-down-btn'>Scroll Down  </button>
           </div>
           <div>
-            <img src="./public/pokemon.png" alt="" width={"200px"} height={"600px"}/>
+            <img src={`${assets.pokemon}`} alt="" width={"200px"} height={"600px"}/>
           </div>
         </div>
         
