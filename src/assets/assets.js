@@ -1,4 +1,4 @@
 import pokemon from "./pokemon.png";
-const assets = { pokemon };
+const assets = { pokemon};
 
 export default assets;

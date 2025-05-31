@@ -24,6 +24,27 @@ h2 {
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
 }
 
+.random-btn {
+  margin-top: 2rem;
+  margin-left: 5rem;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  background-color: #ffcb05;
+  border: 2px dashed black;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #000000;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  transition: transform 0.6s ease;
+}
+
+.random-btn:hover {
+  transform: rotate3d(0, 1, 0, 360deg);
+  background-color: #f5b700;
+}
+
+
 footer {
   color: #00f1ff;
   font-size: 12px;

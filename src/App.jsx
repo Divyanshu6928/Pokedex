@@ -9,6 +9,13 @@ function App() {
   const [search, setSearch] = useState('');
   const [selectedPokemon, setSelectedPokemon] = useState(null);
 
+  const handleRandomPokemon = () => {
+        if (pokemonList.length > 0) {
+          const randomIndex = Math.floor(Math.random() * pokemonList.length);
+          setSelectedPokemon(pokemonList[randomIndex]);
+        }
+      };
+
   // Fetch Pokémon data
   useEffect(() => {
     const fetchData = async () => {
@@ -36,6 +43,9 @@ function App() {
       } catch (error) {
         console.error('Error fetching Pokémon data:', error);  // Log any errors
       }
+
+      
+
     };
 
     fetchData();
@@ -67,10 +77,14 @@ function App() {
 
               Whether battling in games or starring in cartoons, Pikachu stands for friendship, courage, and fun. It’s not just a Pokémon—it’s the heart of the Pokémon world.</p>
 
-              <button className='scroll-down-btn'>Scroll Down  </button>
+              <button className='scroll-down-btn'>Scroll Down 👇</button>
+              
           </div>
           <div>
             <img src={`${assets.pokemon}`} alt="" width={"200px"} height={"600px"}/>
+            <button className='random-btn' onClick={handleRandomPokemon}>
+               Meet your Pokémon BFFs! 🐾"
+              </button>
           </div>
         </div>
         
@@ -114,7 +128,7 @@ function App() {
         />
       )}
 
-      <footer>Made with ❤️ by Divyanshu</footer>
+      <footer>Made with 🧠 by Divyanshu</footer>
     </>
   );
 }
